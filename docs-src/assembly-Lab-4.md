@@ -11,6 +11,8 @@ Os seguintes programas são contemplados nesse lab:
 - abs
 - mult ==(muito importante estudar!)==
 
+
+
 Os problemas desse lab possuem teste unitário, para isso você deve editar o arquivo de configurações de teste: `test/config.txt` e descomentar o módulo que está implementando. E então executar o script `testeAssembly.py`
 
 !!! example "mov.nasm" 
