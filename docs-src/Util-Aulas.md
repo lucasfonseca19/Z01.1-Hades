@@ -35,7 +35,7 @@ Labs:
 
 -  Labs e Teoria (~1h15):
 
--->
+
 
 ## Aula 9
 
@@ -149,7 +149,7 @@ Estudar lógica booleana e praticar; Introdução ao git com trabalho coletivo.
 
 1. Laboratório (15 min): 
     - [Lab 2: GitHub](/Z01.1/A-Ambiente-Lab-2)
-
+-->
 ## Aula 1
 
 Aula de apresentação da matéria; visão geral do que vai ser feito; Criação de grupos e preparar github do grupo.
