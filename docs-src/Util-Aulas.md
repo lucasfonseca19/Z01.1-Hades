@@ -2,7 +2,7 @@
 
 Resumo e planejamento das aulas.
 
-![](https://github.com/Insper/Z01.1/raw/master/Planejamento.png){width=550}
+![](https://github.com/Insper/Z01.1/raw/main/Planejamento.png){width=550}
 
 <!--
 ## Aula 13 - nasm jmp 
