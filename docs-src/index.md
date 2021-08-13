@@ -3,12 +3,14 @@
 ![](figs/icon-elementos.png)
 
 - **Curso:** Engenharia Da Computação - Terceiro semestre
-- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2019-2.
-- **Prof.** Rafael Corsi / rafael.corsi@insper.edu.br
+- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2021-2.
+- **Prof.** Renan Trevisoli / renantd@insper.edu.br
 - **Repositório:** [http:/github.com/Insper/Z01.1](http:/github.com/Insper/Z01.1)
 - **Local:** Laboratório de Informática  - 404
 
 **© Todos os direitos reservados**
+
+- Criado por prof. Rafael Corsi / rafael.corsi@insper.edu.br
 
 -------------------------
 

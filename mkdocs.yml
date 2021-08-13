@@ -5,7 +5,7 @@ theme:
 #    - navigation.tabs
     - navigation.instant
   palette:
-      primary: 'white'
+      primary: 'black'
       accent: 'pink'
 
 docs_dir: 'docs-src'
