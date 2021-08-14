@@ -33,7 +33,7 @@ Desenvolver um computador do ZERO!
 A disciplina é avaliada em duas frentes: avaliação individual e APS:
 
 - Individual: ao longo do semestre o aluno deve acumular `60 pontos` de `Software` e `60 pontos` de `Hardware` 
-esses pontos estarão distribuídos nas quatro avaliações (P1,P2,P3,P4) que serão aplicadas ao longo do semestre. 
+esses pontos estarão distribuídos nas quatro avaliações (A1,A2,A3,A4) que serão aplicadas ao longo do semestre. 
 
 - APS: Compostas por duas notas: `Grupo` e `Individual` sendo que cada uma segue uma 
 rubrica diferente e avalia objetivo diferentes do curso.
