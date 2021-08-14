@@ -1,6 +1,6 @@
 # Álgebra Booleana
 
-- Conteúdo: Equações; Operações (portas lógicas); Tabela Verdadeç; Sintetização de funções; Soma dos Produtos; Produto das Somas; Simplificação Algébrica; Mapa de Karnaught.
+- Conteúdo: Equações; Operações (portas lógicas); Tabela Verdade; Sintetização de funções; Soma dos Produtos; Produto das Somas; Simplificação Algébrica; Mapa de Karnaught.
 
 | Estudando      |                                                                                                                                                                                                            |
 | ---------      | --                                                                                                                                                                                                         |
