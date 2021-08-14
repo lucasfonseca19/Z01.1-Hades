@@ -15,7 +15,7 @@ Grupo de até 6 pessoas! Preencher a tabela a seguir:
 
 https://docs.google.com/spreadsheets/d/1XhAXg-nwWI8tvm6oyWrA2L4KHHK8cY8r19hw9sZuAhE/edit?usp=sharing
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDfb_L2u3uDbXfS4A-d0HIbBZsw04DLMZd_PXqmctQf6UWmvHErdbkV43DShwt_zWr7j6vqCr4o6PS/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe width="800" height="200" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDfb_L2u3uDbXfS4A-d0HIbBZsw04DLMZd_PXqmctQf6UWmvHErdbkV43DShwt_zWr7j6vqCr4o6PS/pubhtml?widget=true&amp;headers=false"></iframe>
 
 ## GitHub
 
