@@ -13,7 +13,7 @@ Os alunos devem:
 
 ## Provas
 
-Ao longo do semestre o aluno deve acumular `60 pontos` de `Software` e `60 pontos` de `Hardware` esses pontos estarão distribuídos nas quatro provas (P1, P2, P3, P4) que serão aplicadas ao longo do semestre. 
+Ao longo do semestre o aluno deve acumular `60 pontos` de `Software` e `60 pontos` de `Hardware` esses pontos estarão distribuídos nas quatro provas (A1, A2, A3, A4) que serão aplicadas ao longo do semestre. 
 
 A nota final de **prova** (atingido atingido o critério) será a média da soma das notas de HW e SW  aplicado o conceito (final da página).
 
