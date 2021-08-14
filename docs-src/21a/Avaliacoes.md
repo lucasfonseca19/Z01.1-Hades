@@ -2,6 +2,7 @@
 
 Informações sobre as avaliações (e simulados) da disciplina:
 
+<!---
 ## AV2 - AF
 
 Avaliação prática individual deve ser realizada no SSD Linux, a avaliação será distribuída via github classroom e o envio deve ser feito via ele.
@@ -28,9 +29,9 @@ Liberado consulta ao material da disciplina.
 - Exercícios:
    -  [Handout Aritmética Booleana](https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
    -  [Lógica Sequencial 1](https://docs.google.com/forms/d/e/1FAIpQLSdGuoLR1Re3aok6I6adChgaDuMg0-dJaA7FF2gK5MLIGReg3g/viewform)
+--->
 
-
-## AV1 - sexta 12/3
+## AV1 - sexta 03/09
 
 Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
 
