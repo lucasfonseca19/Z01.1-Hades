@@ -155,13 +155,13 @@ Estudar lógica booleana e praticar; Introdução ao git com trabalho coletivo.
 Aula de apresentação da matéria; visão geral do que vai ser feito; Criação de grupos e preparar github do grupo.
 
 1. Slides (1h00):
-    - [Slide](https://github.com/Insper/Z01.1/raw/master/Materias-Aula/01-Introducao-Slides.pdf)
+    - [Slide](https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf)
     - [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/)
     CALC
     
 1. Handout/ Estudo/ Exercício (40 min):
-    - [Montar grupos](https://docs.google.com/spreadsheets/d/1hbrLelEdeRQr9siGwYfisSL55E5JMIX5kgyoh7u47yY/edit?usp=sharing)
-    - [Mural](https://app.mural.co/t/elementos9119/m/elementos9119/1597285239955/b0ee33c2c314f45deed54bff567249274e9cccc6)
+    - [Montar grupos](https://docs.google.com/spreadsheets/d/1XhAXg-nwWI8tvm6oyWrA2L4KHHK8cY8r19hw9sZuAhE/edit?usp=sharing)
+    - [Mural](https://app.mural.co/invitation/mural/elementos9119/1628606349982?sender=u4a998cd84eb9376497204438&key=a177e160-10a3-47a3-ae03-76784c7b765f)
    
 1. Laboratório (20 min): 
     - [Lab 1: Configurando GitHub](/Z01.1/A-Ambiente-Lab-1)
