@@ -24,7 +24,7 @@ A tecnologia CMOS (Complementary MOS) é um tipo de processo de fabricação cri
 
 ![](figs/A-Transistores/not.png){width=200}
 
-Quando ambos os transistores estão ligados em série como apresentado na figura, ao se aplicar um $v_{in}$ positivo, o nMOS (transistor inferior) se comporta como chave fechada enquanto o pMOS (transistor superior) se comporta como chave aberta. Assim, a tensão na saída será nula. Ao se aplicar um $v_{in}$ nulo, o nMOS passa a se comportar como chave aberta enquanto o pMOS se comporta como chave fechada. Assim, a tensão na saída será positiva. Pode-se observar que o circuito opera como um inversor.
+Quando ambos os transistores estão ligados em série como apresentado na figura, ao se aplicar uma tensão de entrada positiva, o nMOS (transistor inferior) se comporta como chave fechada enquanto o pMOS (transistor superior) se comporta como chave aberta. Assim, a tensão na saída será nula. Ao se aplicar uma tensão de entrada nula, o nMOS passa a se comportar como chave aberta enquanto o pMOS se comporta como chave fechada. Assim, a tensão na saída será positiva. Pode-se observar que o circuito opera como um inversor.
 
 
 ### Lógica NAND
