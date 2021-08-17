@@ -22,21 +22,21 @@ A tecnologia CMOS (Complementary MOS) é um tipo de processo de fabricação cri
 
 ### Lógica NOT
 
-![](circuitos/not.png){width=200}
+![](figs/A-Transistores/not.png){width=200}
 
 Quando ambos os transistores estão ligados em série como apresentado na figura, ao se aplicar um $v_{in}$ positivo, o nMOS (transistor inferior) se comporta como chave fechada enquanto o pMOS (transistor superior) se comporta como chave aberta. Assim, a tensão na saída será nula. Ao se aplicar um $v_{in}$ nulo, o nMOS passa a se comportar como chave aberta enquanto o pMOS se comporta como chave fechada. Assim, a tensão na saída será positiva. Pode-se observar que o circuito opera como um inversor.
 
 
 ### Lógica NAND
 
-![](circuitos/nand.png){width=200}
+![](figs/A-Transistores/nand.png){width=200}
 
 Para formar a porta lógica NAND, dois transistores nMOS são ligados em série enquanto que dois pMOS são ligados em paralelo. A análise pode ser feita de mesma forma que para o circuito inversor.
 
 
 ### Lógica NOR
 
-![](circuitos/nand.png){width=200}
+![](figs/A-Transistores/nor.png){width=200}
 
 Para formar a porta lógica NOR, dois transistores pMOS são ligados em série enquanto que dois nMOS são ligados em paralelo. A análise pode ser feita de mesma forma que para o circuito inversor.
 
