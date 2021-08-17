@@ -73,6 +73,7 @@ nav:
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
+  - 'Teoria-CMOS.md'
   - 'Teoria-RTL.md'
   - 'Teoria-Dados.md'
   - 'Teoria-Componentes.md'
