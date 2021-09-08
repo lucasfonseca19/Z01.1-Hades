@@ -33,11 +33,19 @@ architecture rtl of TopLevel is
 --------------
 -- signals
 --------------
-
+	
+	signal X : std_logic;
+	signal y : std_logic;
+	signal z : std_logic;
+	
 ---------------
 -- implementacao
 ---------------
 begin
-          
+    
+	 X <= SW(0);
+	 y <= SW(1);
+	 z <= SW(2);
+	 
 
 end rtl;
