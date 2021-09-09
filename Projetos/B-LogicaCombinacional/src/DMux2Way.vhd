@@ -12,5 +12,8 @@ end entity;
 architecture rtl of DMux2Way is
 begin
 
+	q0 <= a AND sel;
+	q1 <= a AND sel;
+
 
 end architecture;
