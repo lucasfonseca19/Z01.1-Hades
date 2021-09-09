@@ -18,5 +18,13 @@ end entity;
 architecture arch of DMux8Way is
 begin
 
-
+	q0 <= not sel(2) and not sel(1) and not sel(0) and a;
+	q1 <= not sel(2) and not sel(1) and sel(0) and a;
+	q2 <= not sel(2) and sel(1) and not sel(0) and a;
+	q3 <= not sel(2) and sel(1) and sel(0) and a;
+	q4 <= sel(2) and not sel(1) and not sel(0) and a;
+	q5 <= sel(2) and not sel(1) and sel(0) and a;
+	q6 <= sel(2) and sel(1) and not sel(0) and a;
+	q7 <= sel(2) and sel(1) and sel(0) and a;
+		  
 end architecture;
