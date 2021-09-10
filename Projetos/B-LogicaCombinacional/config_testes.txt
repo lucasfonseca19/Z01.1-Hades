@@ -22,7 +22,7 @@ Mux4Way.vhd
 Mux16.vhd
 Mux4Way16.vhd
 Mux8Way16.vhd
-BarrelShifter16.vhd
+#BarrelShifter16.vhd
 circuito.vhd
 detectorDeMoedas.vhd
 impressora.vhd
