@@ -14,5 +14,14 @@ end entity;
 architecture arch of Mux4Way is
 begin
 
+p_mux : process(a,b,c,d,sel)
+begin
+    case sel is
+        when "00" => q <= a;
+	when "01" => q <= b;
+	when "10" => q <= c;
+	when others => q <= d; 
+    end case;
+end process p_mux;
 
 end architecture;
