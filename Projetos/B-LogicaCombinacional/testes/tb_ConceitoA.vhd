@@ -51,17 +51,17 @@ begin
     test_runner_setup(runner, runner_cfg);
 
     sw <= "0000001010";
-    wait for 10 ns;
+    wait for 100 ns;
     wait until clk='1' ;
     assert(hex2 = "1000000" and hex1 = "1111001" and hex0 = "1000000")  report "Falha em teste: 1" severity error;
 
     sw <= "0000010110"; -- 22
-    wait for 10 ns;
+    wait for 100 ns;
     wait until clk='1' ;
     assert(hex2 = "1000000" and hex1 = "0100100" and hex0 = "0100100")  report "Falha em teste: 1" severity error;
 
     sw <= "0101001101"; -- 333
-    wait for 10 ns;
+    wait for 100 ns;
     wait until clk='1' ;
     assert(hex2 = "0110000" and hex1 = "0110000" and hex0 = "0110000")  report "Falha em teste: 1" severity error;
 
