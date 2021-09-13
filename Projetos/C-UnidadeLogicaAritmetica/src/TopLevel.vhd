@@ -18,8 +18,8 @@ use ieee.numeric_std.all;
 ----------------------------
 entity TopLevel is
 	port(
-		SW      : in  std_logic_vector(9 downto 0);
-		LEDR    : out std_logic_vector(9 downto 0)
+		SW      : in  std_logic_vector(31 downto 0);
+		LEDR    : out std_logic_vector(15 downto 0)
 	);
 end entity;
 
@@ -51,12 +51,22 @@ architecture rtl of TopLevel is
           soma,vaium: out STD_LOGIC   -- sum e carry
           );
     end component;
+	 
+	component Add16 is
+		port(
+			a   :  in STD_LOGIC_VECTOR(15 downto 0);
+			b   :  in STD_LOGIC_VECTOR(15 downto 0);
+			q   : out STD_LOGIC_VECTOR(15 downto 0)
+		);
+	end component;
+
 
 ---------------
 -- implementacao
 ---------------
 begin
-
-  u1 : HalfAdder port map(a => SW(0), b=> SW(1), soma => LEDR(0), vaium => LEDR(1));
-
+  -- u0 : HalfAdder port map(a => SW(0), b=> SW(1), soma => LEDR(0), vaium => LEDR(1));
+  -- u1 : FullAdder port map(a => SW(0), b=> SW(1), c=> SW(2), soma => LEDR(0), vaium => LEDR(1));
+  u1 : Add16 port map(a => SW(15 downto 0), b=> SW(31 downto 16), q=> LEDR(15 downto 0));
+  
 end rtl;
