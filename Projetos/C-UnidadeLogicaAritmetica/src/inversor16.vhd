@@ -20,5 +20,7 @@ architecture rtl of inversor16 is
 
 begin
   -- Implementação vem aqui!
+  
+  y <= not(a) xnor z;
 
 end architecture;
