@@ -38,7 +38,7 @@ entity ALU is
 			zr:    out STD_LOGIC;                    -- setado se saída igual a zero
 			ng:    out STD_LOGIC;                    -- setado se saída é negativa
 			saida: out STD_LOGIC_VECTOR(15 downto 0) -- saída de dados da ALU
-	);
+	);	
 end entity;
 
 architecture  rtl OF alu is
@@ -97,5 +97,39 @@ architecture  rtl OF alu is
 
 begin
   -- Implementação vem aqui!
-
+	Z0 : zerador16 port map(
+		z => zx,
+		a => x,
+		y => zxout);
+	Z1 : zerador16 port map(
+		z => zy,
+		a => y,
+		y => zyout);
+	I0 : inversor16 port map(
+		z => nx,
+		a => zxout,
+		y => nxout);
+	I1 : inversor16 port map(
+		z => ny,
+		a => zyout,
+		y => nyout);
+	A0 : Add16 port map(
+		a => nxout,
+		b => nyout,
+		q => adderout);
+	andout <= nxout and nyout;
+	M0 : Mux16 port map(
+		a => andout,
+		b => adderout,
+		sel => f,
+		q =>muxout);
+	I2 : inversor16 port map(
+		z => no,
+		a => muxout,
+		y => precomp);
+	C0 : comparador16 port map(
+		a => precomp,
+		zr => zr,
+		ng => ng);
+	saida <= precomp;
 end architecture;
