@@ -73,5 +73,5 @@ begin
   -- u0 : HalfAdder port map(a => SW(0), b=> SW(1), soma => LEDR(0), vaium => LEDR(1));
   -- u1 : FullAdder port map(a => SW(0), b=> SW(1), c=> SW(2), soma => LEDR(0), vaium => LEDR(1));
   --u1 : Add16 port map(a => SW(15 downto 0), b=> SW(31 downto 16), q=> LEDR(15 downto 0));
-  u1 : Inc16 port map(a => SW(15 downto 0), q=> LEDR(15 downto 0));
+  --u1 : Inc16 port map(a => SW(15 downto 0), q=> LEDR(15 downto 0));
 end rtl;
