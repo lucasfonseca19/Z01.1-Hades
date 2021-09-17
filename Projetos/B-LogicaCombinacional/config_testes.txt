@@ -31,5 +31,5 @@ sevenSeg.vhd
 
 ##### conceito A e B
 
-#ConceitoB.vhd
-#ConceitoA.vhd
+ConceitoB.vhd
+ConceitoA.vhd
