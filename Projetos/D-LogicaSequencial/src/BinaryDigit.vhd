@@ -35,7 +35,6 @@ architecture arch of BinaryDigit is
 	end component;
 
 	signal dffout,muxout: std_logic;
-
 begin
 
 	A0 : Mux2Way port map(
@@ -45,10 +44,12 @@ begin
 		q => muxout);
 		
 	A1 : FlipFlopD port map(
+
 		clock => clock,
 		d => muxout,
 		clear => '0',
 		preset => '1',
+
 		q => dffout);	
 
 	process(clock, input, load) begin
