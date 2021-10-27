@@ -152,7 +152,7 @@ BEGIN
     -- SAIDA do memory I/O                --
     ----------------------------------------
     -- precisar ser: RAM ou SW16
-    OUTPUT <= OUTPUT_RAM when LOAD_RAM = '1'; --or SW16;
+    OUTPUT <= SW16 when (ADDRESS = "101001011000001") else OUTPUT_RAM; --or SW16;
 	 
 
 
