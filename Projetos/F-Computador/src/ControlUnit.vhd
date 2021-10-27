@@ -31,15 +31,14 @@ architecture arch of ControlUnit is
 begin
 	loadD <= instruction(17) and instruction(4);
 	loadM <= instruction(17) and instruction(5);
-	loadA <= (instruction(17) and instruction(3)) or not instruction(17);
+	loadA <= instruction(3);
+	 --loadPC <= 
+	 
+	 --zr <=
+	 --ng <=
 	
-	
-	loadPC <= instruction(17) and ((instruction(0) and (not zr and not ng)) or 
-             (instruction(1) and zr) or (instruction(2) and (not zr and ng)) or (instruction(0) and instruction(1) and instruction(2))); 
-				 
-				 
-	muxALUI_A <= not instruction(17);
-	muxAM <= instruction(13);
+	muxALUI_A <= instruction(13);
+	--muxAM <= 
 	
 	zx <= instruction(17) and instruction(12);
 	nx <= instruction(17) and instruction(11);
