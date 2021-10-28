@@ -144,23 +144,23 @@ begin
 	MUXAM: Mux16 
 		port map (
 		 a=> s_muxALUI_Aout,
-		 b => inM
+		 b => inM,
 		 sel => c_muxAM,
 		 q => s_muxAM_out);
 		 
 	RA : Register16 
 		port map(
-		 clock <= clock;
-		 input <= s_muxALUI_Aout;
-		 load <= c_loadA;
-		 output <= s_regAout);
+		 clock => clock,
+		 input => s_muxALUI_Aout,
+		 load => c_loadA,
+		 output => s_regAout);
  
 	RD : Register16 
 		port map(
-		 clock <= clock;
-		 input <= s_ALUout;
-		 load <= c_loadD;
-		 output <= s_regDout);
+		 clock => clock,
+		 input => s_ALUout,
+		 load => c_loadD,
+		 output => s_regDout);
 		 
 	muxALU : Mux16 
 		port map(
