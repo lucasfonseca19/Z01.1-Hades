@@ -31,11 +31,32 @@ architecture arch of ControlUnit is
 begin
 	loadD <= instruction(17) and instruction(4);
 	loadM <= instruction(17) and instruction(5);
-	loadA <= (instruction(17) and instruction(3)) or not instruction(17);
+	loadA <= not instruction(17);
 	
 	
-	loadPC <= instruction(17) and ((instruction(0) and (not zr and not ng)) or 
-             (instruction(1) and zr) or (instruction(2) and (not zr and ng)) or (instruction(0) and instruction(1) and instruction(2))); 
+--	loadPC <= instruction(17) and ((instruction(0) and (not zr and not ng)) or 
+--             (instruction(1) and zr) or 
+--				 (instruction(2) and (not zr and ng)) or 
+--				 (instruction(0) and instruction(1) and instruction(2))); 
+				 
+--	loadPC <= instruction(17) and 
+--            ((not(instruction(2)) and not(instruction(1)) and (instruction(0)) and not(ng) and not(zr)) or
+--            (not(instruction(2)) and (instruction(1)) and not(instruction(0)) and not(ng) and zr) or
+--            (not(instruction(2)) and (instruction(1)) and (instruction(0)) and not(ng)) or
+--            ((instruction(2)) and not(instruction(1)) and not(instruction(0)) and ng and not(zr)) or
+--            ((instruction(2)) and not(instruction(1)) and (instruction(0)) and not(zr)) or
+--            ((instruction(2)) and (instruction(1)) and not(instruction(0)) and (zr or ng)) or
+--            ((instruction(2)) and (instruction(1)) and (instruction(0))));
+--				
+	loadPC <= instruction(17) and 
+            ((not(instruction(2)) and not(instruction(1)) and (instruction(0)) and not(ng) and not(zr)) or
+            (not(instruction(2)) and (instruction(1)) and not(instruction(0)) and not(ng) and zr) or
+				((instruction(2)) and not(instruction(1)) and not(instruction(0)) and ng and not(zr)) or
+				((instruction(2)) and (instruction(1)) and not(instruction(0)) and (zr or ng)) or
+            (not(instruction(2)) and (instruction(1)) and (instruction(0)) and not(ng)) or
+            ((instruction(2)) and not(instruction(1)) and (instruction(0)) and not(zr)) or
+            ((instruction(2)) and (instruction(1)) and (instruction(0))));
+
 				 
 				 
 	muxALUI_A <= not instruction(17);

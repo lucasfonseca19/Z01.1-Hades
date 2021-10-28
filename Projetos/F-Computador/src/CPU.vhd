@@ -127,9 +127,9 @@ begin
 		input =>s_regAout,
 		output =>s_pcout);
 		
-	ALU: ALU 
+	ula: ALU
 		port map(
-		 x => s_regDout,
+		 x => s_regDout, 
 		 y => s_muxAM_out,
 		 zx => c_zx,
 		 nx => c_nx,
@@ -143,7 +143,7 @@ begin
 		 
 	MUXAM: Mux16 
 		port map (
-		 a=> s_muxALUI_Aout,
+		 a=> s_muxALUI_Aout, 
 		 b => inM,
 		 sel => c_muxAM,
 		 q => s_muxAM_out);
@@ -164,7 +164,7 @@ begin
 		 
 	muxALU : Mux16 
 		port map(
-			a => s_ALUout,
+			a => s_ALUout, 
 			b => instruction(15 downto 0),
 			sel => c_muxALUI_A,
 			q => s_muxALUI_Aout);
