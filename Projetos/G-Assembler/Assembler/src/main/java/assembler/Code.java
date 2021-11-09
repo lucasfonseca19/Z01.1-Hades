@@ -16,8 +16,27 @@ public class Code {
      * @return Opcode (String de 4 bits) com código em linguagem de máquina para a instrução.
      */
     public static String dest(String[] mnemnonic) {
-        /* TODO: implementar */
-    	return "";
+        if (mnemnonic.length > 3){
+            if (mnemnonic[3].equals("(%A)")){
+                return "0110";
+            }
+        }
+        if (mnemnonic.length > 1) {
+            int lastIndex = mnemnonic.length - 1;
+            switch (mnemnonic[lastIndex]) {
+                case "%D":
+                    return "0010";
+                case "%A":
+                    return "0001";
+                case "(%A)":
+                    return "0100";
+                default:
+                    return "0000";
+            }
+        }
+        else {
+            return "0000";
+        }
     }
 
     /**
@@ -37,7 +56,25 @@ public class Code {
      */
     public static String jump(String[] mnemnonic) {
         /* TODO: implementar */
-    	return "";
+
+        switch (mnemnonic[0]) {
+            case "jmp":
+                return "111";
+            case "je":
+                return "010";
+            case "jg":
+                return "001";
+            case "jge":
+                return "011";
+            case "jl":
+                return "100";
+            case "jne":
+                return "101";
+            case "jle":
+                return "110";
+            default:
+                return "000";
+        }
     }
 
     /**
@@ -46,8 +83,10 @@ public class Code {
      * @return Valor em binário (String de 15 bits) representado com 0s e 1s.
      */
     public static String toBinary(String symbol) {
-        /* TODO: implementar */
-    	return "";
+        int decimal = Integer.parseInt(symbol);
+        String result = Integer.toBinaryString(decimal);
+        String binario = String.format("%16s", result).replaceAll(" ", "0");  // 16-bit Integer
+        return binario ;
     }
 
 }
