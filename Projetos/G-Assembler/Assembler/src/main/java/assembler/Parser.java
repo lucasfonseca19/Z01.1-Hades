@@ -104,22 +104,21 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String symbol(String command) {
-        /* TODO: implementar */
+        /* TODO: ibmfnplementar */
         String s1 = command.substring(command.indexOf("$")+1);
         s1.trim();
         String[] separacao = s1.split(",");
         return separacao[0];
     }
 
-    /**
+    /**                                                    nf
      * Retorna o símbolo da instrução passada no argumento.
      * Deve ser chamado somente quando commandType() é L_COMMAND.
      * @param  command instrução a ser analisada.
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public String label(String command) {
-        /* TODO: implementar */
-    	return null;
+        return command.split(":")[0];
     }
 
     /**
@@ -129,8 +128,7 @@ public class Parser {
      * @return um vetor de string contento os tokens da instrução (as partes do comando).
      */
     public String[] instruction(String command) {
-        String[] arr = command.split( "[\\s,]+" );
-        return arr ;
+        return command.split( "[\\s,]+" ) ;
     }
 
 
