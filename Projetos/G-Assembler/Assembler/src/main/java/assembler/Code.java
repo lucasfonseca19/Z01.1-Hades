@@ -16,9 +16,17 @@ public class Code {
      * @return Opcode (String de 4 bits) com código em linguagem de máquina para a instrução.
      */
     public static String dest(String[] mnemnonic) {
+
+        if (mnemnonic.length > 4){
+            return "0111";
+        }
         if (mnemnonic.length > 3){
-            if (mnemnonic[3].equals("(%A)")){
+            if ((mnemnonic[2].equals("%D")) && (mnemnonic[3].equals("(%A)"))){
                 return "0110";
+            }
+
+            if ((mnemnonic[2].equals("%A")) && (mnemnonic[3].equals("%D")) || (mnemnonic[2].equals("%D")) && (mnemnonic[3].equals("%A"))){
+                return "0011";
             }
         }
         if (mnemnonic.length > 1) {
