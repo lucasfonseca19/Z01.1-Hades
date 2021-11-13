@@ -104,14 +104,30 @@ public class Assemble {
          * seguindo o instruction set
          */
         while (parser.advance()){
+            //System.out.println(parser.commandType(parser.command()));
             switch (parser.commandType(parser.command())){
-                /* TODO: implementar */
-                case C_COMMAND:
-                break;
-            case A_COMMAND:
-                break;
-            default:
-                continue;
+                case C_COMMAND: // Bit 17 e 16
+                    String inicio = "10";
+                    // bit  15 ao 7
+                    String meio = Code.comp(parser.instruction(parser.command()));
+                    // bit  6 ao 3
+                    String quase_fim = Code.dest(parser.instruction(parser.command()));
+                    // bit  2 ao 0
+                    String fim = Code.jump(parser.instruction(parser.command()));
+                    instruction = inicio + meio + quase_fim + fim;
+                    break;
+                case A_COMMAND : // Bit 17 e 16
+                    String inicioA = "00";
+                    try {
+                        String resto = Code.toBinary(parser.symbol(parser.command()));
+                        instruction = inicioA + resto;
+                    } catch (Exception e) {
+                        String resto = Code.toBinary(String.valueOf(table.getAddress(parser.symbol(parser.command()))));
+                        instruction = inicioA + resto;
+                    }
+                    break;
+                default:
+                    continue;
             }
             // Escreve no arquivo .hack a instrução
             if(outHACK!=null) {

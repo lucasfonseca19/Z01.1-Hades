@@ -64,6 +64,13 @@ public class Code {
                     case "(%A)":
                         return "001110000";
                 }
+                instrucao = mnemnonic[1] + " " + mnemnonic[2];
+                if (instrucao.equals("$1 (%A)")){
+                    return "000111111";
+                }
+                if (instrucao.equals("$0 (%A)")){
+                    return "000101010";
+                }
             case "addw":
                 instrucao = mnemnonic[1] + " " + mnemnonic[2];
                 switch (instrucao) {
