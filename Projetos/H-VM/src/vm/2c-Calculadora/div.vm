@@ -1,1 +1,23 @@
 function div 2
+
+label LOOP
+push argument 0
+push constant 0
+eq
+if-goto END
+
+push argument 0
+push argument 1
+sub
+pop argument 0
+
+push local 0
+push constant 1 
+add
+pop local 0
+goto LOOP
+
+label END
+push local 0
+
+return
