@@ -52,34 +52,72 @@ public class Code {
             commands.add("decw %A");
             commands.add("addw (%A), %D, %D");
             commands.add("movw %D, (%A)");
-            //commands.add("addw $1, %A, %D");
-            //commands.add("leaw $0, %A");
-            //commands.add("movw %D, (%A)");
+            commands.add("addw $1, %A, %D");
+            commands.add("leaw $0, %A");
+            commands.add("movw %D, (%A)");
 
         } else if (command.equals("sub")) {
             commands.add(String.format("; %d - SUB", lineCode++));
-            // IMPLEMENTAR AQUI O LAB
-            // LEMBRAR DE USAR A FUNÇÃO commands.add()!
+            commands.add("leaw $0, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %D");
+            commands.add("decw %A");
+            commands.add("subw (%A), %D, %D");
+            commands.add("movw %D, (%A)");
+            commands.add("addw $1, %A, %D");
+            commands.add("leaw $0, %A");
+            commands.add("movw %D, (%A)");
+        
         } else if (command.equals("neg")) {
-            commands.add(String.format("; %d - NEG", lineCode++));
+
+            commands.add("leaw $0, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %D");
+            commands.add("negw %D");
+            commands.add("movw %D, (%A)");
+            commands.add("addw $1, %A, %D");
+            commands.add("leaw $0, %A");
+            commands.add("movw %D, (%A)");
+
+
 
         } else if (command.equals("eq")) {
             commands.add(String.format("; %d - EQ", lineCode++));
+            //TODO eq
+            commands.add("leaw $0, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %D");
+            commands.add("decw %A");
+            commands.add("subw %D, (%A), %D");
+            commands.add("leaw $NOTEQ, %A");
+            commands.add("jne %D");
+            commands.add("leaw $0, %A");
+            commands.add("movw (%A),%A");
+            commands.add("notw %D");
+            commands.add("movw %D, (%A)");
+            commands.add("leaw $FINAL, %A");;
+            commands.add("jmp");
+            commands.add("NOTEQ:");
+
+
 
         } else if (command.equals("gt")) {
             commands.add(String.format("; %d - GT", lineCode++));
-
+            //TODO gt
         } else if (command.equals("lt")) {
             commands.add(String.format("; %d - LT", lineCode++));
-
+            //TODO lt
         } else if (command.equals("and")) {
             commands.add(String.format("; %d - AND", lineCode++));
-
+            //TODO and
         } else if (command.equals("or")) {
             commands.add(String.format("; %d - OR", lineCode++));
-
+            //TODO or
         } else if (command.equals("not")) {
-
+            //TODO not
         }
 
         String[] stringArray = new String[ commands.size() ];
