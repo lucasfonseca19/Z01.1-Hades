@@ -112,12 +112,39 @@ public class Code {
             //TODO lt
         } else if (command.equals("and")) {
             commands.add(String.format("; %d - AND", lineCode++));
-            //TODO and
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %D");
+            commands.add("decw %A");
+            commands.add("andw (%A), %D, %D");
+            commands.add("movw %D, (%A)");
+            commands.add("incw %A");
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP, %A");
+            commands.add("movw %D, (%A)");
         } else if (command.equals("or")) {
             commands.add(String.format("; %d - OR", lineCode++));
-            //TODO or
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %D");
+            commands.add("decw %A");
+            commands.add("orw (%A), %D, %D");
+            commands.add("movw %D, (%A)");
+            commands.add("incw %A");
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP, %A");
+            commands.add("movw %D, (%A)");
+
         } else if (command.equals("not")) {
-            //TODO not
+
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("movw (%A), %D");
+            commands.add("notw %D");
+            commands.add("movw %D, (%A)");
         }
 
         String[] stringArray = new String[ commands.size() ];
