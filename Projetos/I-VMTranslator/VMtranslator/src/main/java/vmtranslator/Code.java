@@ -367,23 +367,29 @@ public class Code {
                 commands.add("movw %D, (%A)");
 
             } else if (segment.equals("temp")) {
+                //carrega SP e decrementa ele
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %D");
                 commands.add("decw %D");
                 commands.add("movw %D, (%A)");
 
+                //carrega o index do temp no D
                 commands.add("leaw $" + index.toString() +", %A");
                 commands.add("movw %A, %D");
-                commands.add("leaw $5, %A");
-                commands.add("addw (%A), %D, %D");
+                commands.add("leaw $5, %A"); //comeco do temp
+                commands.add("addw %A, %D, %D"); //comeco do temp + index
 
+                //usando o endereco 13 para salver temporariamente
+                // o valor que tava no temp + index
                 commands.add("leaw $R13, %A");
-                commands.add("movw %D, (%A)");
+                commands.add("movw %D, (%A)"); //comeco + index do temp salvo no R13
 
+                //carrega SP no D
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
-                commands.add("movw (%A), %D");
+                commands.add("movw (%A), %D"); 
 
+                //carrega o valor do SP para o comeco do temp??
                 commands.add("leaw $R13, %A");
                 commands.add("movw (%A), %A");
                 commands.add("movw %D, (%A)");
