@@ -107,6 +107,48 @@ public class Code {
         } else if (command.equals("gt")) {
             commands.add(String.format("; %d - GT", lineCode++));
             //TODO gt
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A"); // move o que esta em SP para o registrador A
+            commands.add("decw %A"); // decresce uma linha
+            commands.add("movw (%A), %D"); //move o que esta em SP-1 para o registrador D
+            commands.add("decw %A"); // decresce mais uma linha
+            commands.add("movw (%A), %A"); // move o que esta em SP-2 para o registrador A
+            commands.add("subw %A, %D, %D"); //subtrai do que esta no registrador A o que esta no registrador D
+
+            commands.add("leaw $TRUE, %A"); // prepara para saltar para a linha TRUE caso condicao seja verdadeira
+            commands.add("jg %D"); // condicao de o resultado ser maior que 0
+            commands.add("nop");
+
+            // Se nao houve salto, condicao retornou false
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw $0, (%A)"); // 0000000000000000 significa false
+            commands.add("incw %A");
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP, %A");
+            commands.add("movw %D, (%A)"); // mover o valor do que esta em SP para o endereco da memoria
+            commands.add("leaw $END, %A"); // prepara para saltar para a linha END e finalizar
+            commands.add("jmp");
+            commands.add("nop");
+
+            commands.add("TRUE:"); // houve salto, portanto a condicao retornou true
+            commands.add("leaw $SP, %A");
+            commands.add("movw (%A), %A");
+            commands.add("decw %A");
+            commands.add("decw %A");
+            commands.add("movw $-1, (%A)"); // 11111111111111111 significa true
+            commands.add("incw %A");
+            commands.add("movw %A, %D");
+            commands.add("leaw $SP, %A");
+            commands.add("movw %D, (%A)"); // mover o valor do que esta em SP para o endereco da memoria
+            commands.add("leaw $END, %A"); // prepara para saltar para a linha END e finalizar
+            commands.add("jmp");
+            commands.add("nop");
+
+            commands.add("END:");
+
         } else if (command.equals("lt")) {
             commands.add(String.format("; %d - LT", lineCode++));
             commands.add("leaw $SP, %A");
@@ -120,6 +162,7 @@ public class Code {
             commands.add("leaw $TRUE, %A"); // prepara para saltar para a linha TRUE caso condicao seja verdadeira
             commands.add("jl %D"); // condicao de o resultado ser menor que 0
             commands.add("nop");
+
             // Se nao houve salto, condicao retornou false
             commands.add("leaw $SP, %A");
             commands.add("movw (%A), %A");
