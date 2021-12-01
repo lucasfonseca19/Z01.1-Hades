@@ -344,7 +344,7 @@ public class Code {
                 //carrega SP no D
                 commands.add("leaw $SP, %A");
                 commands.add("movw (%A), %A");
-                commands.add("movw (%A), %D"); 
+                commands.add("movw (%A), %D");
 
                 //carrega o valor do SP para o comeco do temp??
                 commands.add("leaw $R13, %A");
@@ -353,9 +353,44 @@ public class Code {
 
             } else if (segment.equals("pointer")) {
                 if(index==0) {
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("decw %D");
+                    commands.add("movw %D, (%A)");
 
-                } else {
+                    commands.add("leaw $THIS, %A");
+                    commands.add("movw %A, %D");
 
+                    commands.add("leaw $R15, %A");
+                    commands.add("movw %D, (%A)");
+
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw (%A), %A");
+                    commands.add("movw (%A), %D");
+
+                    commands.add("leaw $R15, %A");
+                    commands.add("movw (%A), %A");
+                    commands.add("movw %D, (%A)");
+                }
+                else {
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("decw %D");
+                    commands.add("movw %D, (%A)");
+
+                    commands.add("leaw $THAT, %A");
+                    commands.add("movw %A, %D");
+
+                    commands.add("leaw $R15, %A");
+                    commands.add("movw %D, (%A)");
+
+                    commands.add("leaw $SP, %A");
+                    commands.add("movw (%A), %A");
+                    commands.add("movw (%A), %D");
+
+                    commands.add("leaw $R15, %A");
+                    commands.add("movw (%A), %A");
+                    commands.add("movw %D, (%A)");
                 }
             }
         } else if (command == Parser.CommandType.C_PUSH) {
